@@ -175,7 +175,7 @@
               "publisher": "[variables('imagePublisher')]",
               "offer": "[variables('imageOffer')]",
               "sku": "[variables('ubuntuOSVersion')]",
-              "version": "2022-05-01"
+              "version": "latest"
             },
             "osDisk": {
               "createOption": "FromImage"
