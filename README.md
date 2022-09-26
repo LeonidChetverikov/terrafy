@@ -76,3 +76,15 @@ Although aztfy depends on terraform, it is not required to have terraform pre-in
  - Otherwise, install the latest terraform from Hashicorp's release to the aztfy cache directory
 
 (The aztfy cache directory is at: "<UserCacheDir>/aztfy")
+
+# Azyre terrafy help
+
+To get help please run:
+```
+aztfy
+```
+or
+```
+aztfy help
+```
+![Help Screenshot](./picture/aztfy_help.png)
