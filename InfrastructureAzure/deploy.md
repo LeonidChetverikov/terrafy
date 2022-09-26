@@ -1,4 +1,4 @@
-# Deploy sample infrastrcture
+# Deploy sample infrastructure
 
 **Let deply infrastructure using deploy button from github**
 
