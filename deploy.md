@@ -1,1 +1,1 @@
-![Deploy to Azure](https://aka.ms/deploytoazurebutton)
+![Deploy to Azure](https://portal.azure.com/#create/Microsoft.Template)
