@@ -6,20 +6,21 @@ A tool to bring your existing Azure resources under the management of Terraform.
 
 
 ***From Release***
+
 Precompiled binaries and Window MSI are available at Releases.
 
-From Go toolchain
+-From Go toolchain
 ```
 go install github.com/Azure/aztfy@latest
 ````
 From Package Manager:
 
-Homebrew (Linux/macOS)
+-Homebrew (Linux/macOS)
 ```
 brew install aztfy
 ```
 
-**dnf (Linux)
+-dnf (Linux)
 
 Supported versions:
 
@@ -40,7 +41,7 @@ Install:
 ```
 dnf install aztfy
 ```
-apt (Linux)
+-apt (Linux)
 
 Supported versions:
 
@@ -60,7 +61,7 @@ Install:
 ```
 apt-get install aztfy
 ```
-AUR (Linux)
+-AUR (Linux)
 ```
 yay -S aztfy
 ```
