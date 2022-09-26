@@ -1,1 +1,1 @@
-![https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fterrafyazure.blob.core.windows.net%2Fvm1%2Fvm1.json%3Fsp%3Dr%26st%3D2022-09-26T17%3A43%3A14Z%26se%3D2023-09-27T01%3A43%3A14Z%26spr%3Dhttps%26sv%3D2021-06-08%26sr%3Db%26sig%3DlgKqEYcqOL6yq6v17ImxBuTRO3pO1Jp%252Fg0OtCcALcFw%253D](https://aka.ms/deploytoazurebutton)
+![https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FLeonidChetverikov%2Fterrafy%2Fmain%2FInfrastructureAzure%2Fvm1.json](https://aka.ms/deploytoazurebutton)
