@@ -1,1 +1,1 @@
-![https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FLeonidChetverikov%2Fterrafy%2Fmain%2FInfrastructureAzure%2Fvm1.json](https://aka.ms/deploytoazurebutton)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FLeonidChetverikov%2Fterrafy%2Fmain%2FInfrastructureAzure%2Fvm1.json)
