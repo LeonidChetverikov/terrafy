@@ -33,7 +33,7 @@ rpm --import https://packages.microsoft.com/keys/microsoft.asc
 ```
 Add packages-microsoft-com-prod repository:
 
-# ver=8 # or 9
+**ver=8 # or 9**
 ```
 dnf install -y https://packages.microsoft.com/config/rhel/${ver}/packages-microsoft-prod.rpm
 ```
@@ -53,7 +53,7 @@ curl -sSL https://packages.microsoft.com/keys/microsoft.asc > /etc/apt/trusted.g
 ```
 Add packages-microsoft-com-prod repository:
 
-# ver=20.04 # or 22.04
+**ver=20.04 # or 22.04**
 ```
 apt-add-repository https://packages.microsoft.com/ubuntu/${ver}/prod
 ```
@@ -65,7 +65,7 @@ apt-get install aztfy
 ```
 yay -S aztfy
 ```
-***Precondition
+***Precondition***
 
 There is no special precondtion needed for running aztfy, except that you have access to Azure.
 
