@@ -75,7 +75,7 @@
       {
         "type": "Microsoft.Network/publicIPAddresses",
         "name": "[variables('publicIPAddressName')]",
-        "apiVersion": "2020-05-01",
+        "apiVersion": "latest",
         "location": "[parameters('location')]",
         "properties": {
           "publicIPAllocationMethod": "[variables('publicIPAddressType')]",
@@ -87,7 +87,7 @@
       {
         "comments": "Default Network Security Group for template",
         "type": "Microsoft.Network/networkSecurityGroups",
-        "apiVersion": "2020-05-01",
+        "apiVersion": "latest",
         "name": "[variables('networkSecurityGroupName')]",
         "location": "[parameters('location')]",
         "properties": {
@@ -111,7 +111,7 @@
       {
         "type": "Microsoft.Network/virtualNetworks",
         "name": "[variables('virtualNetworkName')]",
-        "apiVersion": "2020-05-01",
+        "apiVersion": "latest",
         "location": "[parameters('location')]",
         "dependsOn": [
           "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
@@ -138,7 +138,7 @@
       {
         "type": "Microsoft.Network/networkInterfaces",
         "name": "[variables('nicName')]",
-        "apiVersion": "2020-05-01",
+        "apiVersion": "latest",
         "location": "[parameters('location')]",
         "dependsOn": [
           "[resourceId('Microsoft.Network/publicIPAddresses/', variables('publicIPAddressName'))]",
@@ -166,7 +166,7 @@
       {
         "type": "Microsoft.Compute/virtualMachines",
         "name": "[variables('vmName')]",
-        "apiVersion": "2020-06-01",
+        "apiVersion": "latest",
         "location": "[parameters('location')]",
         "dependsOn": [
           "[resourceId('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
