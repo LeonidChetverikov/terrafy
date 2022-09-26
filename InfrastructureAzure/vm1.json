@@ -54,10 +54,6 @@
       "addressPrefix": "10.0.0.0/16",
       "subnetName": "Subnet",
       "subnetPrefix": "10.0.0.0/24",
-      "storageAccountName": "[concat('stglinuxvm', uniquestring(resourceGroup().id))]",
-      "storageAccountSkuName": "Standard_LRS",
-      "storageAccountSkuType": "Standard",
-      "storageAccountKind": "StorageV2",
       "publicIPAddressName": "myPublicIP",
       "publicIPAddressType": "Dynamic",
       "vmName": "MyUbuntuVM",
@@ -76,18 +72,6 @@
       "networkSecurityGroupName": "default-NSG"
     },
     "resources": [
-      {
-        "type": "Microsoft.Storage/storageAccounts",
-        "name": "[variables('storageAccountName')]",
-        "apiVersion": "2020-08-01-preview",
-        "location": "[parameters('location')]",
-        "sku": {
-          "name": "[variables('storageAccountSkuName')]",
-          "tier": "[variables('storageAccountSkuType')]"
-        },
-        "kind": "[variables('storageAccountKind')]",
-        "properties": {}
-      },
       {
         "type": "Microsoft.Network/publicIPAddresses",
         "name": "[variables('publicIPAddressName')]",
@@ -162,7 +146,7 @@
         ],
         "properties": {
           "primary": true,
-          "enableAcceleratedNetworking": true,
+          "enableAcceleratedNetworking": false,
           "ipConfigurations": [
             {
               "name": "ipconfig1",
@@ -185,7 +169,6 @@
         "apiVersion": "2020-06-01",
         "location": "[parameters('location')]",
         "dependsOn": [
-          "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
           "[resourceId('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
         ],
         "properties": {
@@ -222,24 +205,10 @@
                 "id": "[resourceId('Microsoft.Network/networkInterfaces',variables('nicName'))]"
               }
             ]
-          },
-          "diagnosticsProfile": {
-            "bootDiagnostics": {
-              "enabled": true,
-              "storageUri": "[reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2020-08-01-preview').primaryEndpoints['blob']]"
-            }
           }
         }
       }
     ],
     "outputs": {
-      "hostname": {
-        "type": "string",
-        "value": "[reference(variables('publicIPAddressName')).dnsSettings.fqdn]"
-      },
-      "sshCommand": {
-        "type": "string",
-        "value": "[concat('ssh ', parameters('adminUsername'), '@', reference(variables('publicIPAddressName')).dnsSettings.fqdn)]"
-      }
     }
   }
